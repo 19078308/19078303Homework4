@@ -17,7 +17,7 @@
             var status1 = Request["status01"];
             var volunteer1 = Request["volunteer01"];
 
-            var tempdata = name1 + "," + number1 + "," + date1 + "," + amount1 + "," + type1 + "," + status1 + "," + volunteer1 + Environment.NewLine;
+            var tempdata =  name1 + "," + number1 + "," + date1 + "," + amount1 + "," + type1 + "," + status1 + "," + volunteer1 + Environment.NewLine;
 
             var datafile = Server.MapPath("~/App_Data/data.txt");
             File.AppendAllText(datafile, tempdata);
