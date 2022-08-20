@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _19078303Homework4.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -29,12 +30,30 @@ namespace _19078303Homework4.Controllers
 
         public ActionResult Donate()
         {
-            return View();
+            List<Individuals> donors = GetVolunteer();
+            return View(donors);
         }
 
         public ActionResult Members()
         {
-            return View();
+            List<Members> members = new List<Members>();
+            Organisations companies1 = new Organisations("Food and Agriculture Org.", 0129876543, "2022/08/18", 55000.00, true);
+            Individuals volunteer1 = new Individuals("Tshepo Mononyane", 0762444724, "2022/08/18", 78000.00, true);
+
+            return View(members);
         }
+
+        private List<Individuals> GetVolunteer()
+        {
+            List<Individuals> volunteers = new List<Individuals>();
+            return volunteers;
+        }
+        private List<Organisations> GetOrganisation()
+        {
+            List<Organisations> companies = new List<Organisations>();
+            return companies;
+        }
+
+
     }
 }
