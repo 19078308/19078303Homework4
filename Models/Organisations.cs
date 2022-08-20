@@ -7,7 +7,7 @@ namespace _19078303Homework4.Models
 {
     public class Organisations : Members
     {
-        private string _Type;
+       
         private bool _Status;
 
         public Organisations(string fullname, int numbers, string date, double amount, bool status) : base(fullname, numbers, date, amount)
