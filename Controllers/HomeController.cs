@@ -14,6 +14,11 @@ namespace _19078303Homework4.Controllers
             return View();
         }
 
+        public ActionResult Home()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "What we doing and what we want to achieve.";
@@ -39,7 +44,8 @@ namespace _19078303Homework4.Controllers
             List<Members> members = new List<Members>();
             Organisations companies1 = new Organisations("Food and Agriculture Org.", 0129876543, "2022/08/18", 55000.00, true);
             Individuals volunteer1 = new Individuals("Tshepo Mononyane", 0762444724, "2022/08/18", 78000.00, true);
-
+            members.Add(companies1);
+            members.Add(volunteer1);
             return View(members);
         }
 
