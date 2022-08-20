@@ -8,11 +8,11 @@ namespace _19078303Homework4.Models
     public abstract class Members
     {
         private string _FullName;
-        private int _Numbers;
+        private string _Numbers;
         private string _Date;
         private double _Amount;
 
-        public Members(string fullname, int numbers, string date, double amount)
+        public Members(string fullname, string numbers, string date, double amount)
         {
             _FullName = fullname;
             _Numbers = numbers;
@@ -25,7 +25,7 @@ namespace _19078303Homework4.Models
             get { return _FullName; }
             set { _FullName = value; }
         }
-        public int Numbers
+        public string Numbers
         {
             get { return _Numbers; }
             set { _Numbers = value; }

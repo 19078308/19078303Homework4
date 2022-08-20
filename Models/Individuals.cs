@@ -8,7 +8,7 @@ namespace _19078303Homework4.Models
     public class Individuals : Members
     {
         private bool _Volunteer;
-        public Individuals(string fullname, int numbers, string date, double amount, bool volunteer) : base(fullname, numbers, date, amount)
+        public Individuals(string fullname, string numbers, string date, double amount, bool volunteer) : base(fullname, numbers, date, amount)
         {
             _Volunteer = volunteer;
         }

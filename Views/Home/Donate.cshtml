@@ -21,6 +21,7 @@
 
             var datafile = Server.MapPath("~/App_Data/data.txt");
             File.AppendAllText(datafile, tempdata);
+
             @* result = "Thank you for your contributions. Your Information is saved and proctected."; *@
         }
     }
@@ -81,7 +82,7 @@
             <input class="btn btn-success btn-lg" type="submit" value="Submit">
         </form><br /><br />
         <form>
-            <input class="btn btn-primary" type="url" href="" value="Donate Here" />
+            <input class="btn btn-primary" type="url" href="https://give.concernusa.org/give/383482/#!/donation/checkout?first=%7B%7BRecipient.FirstName%7D%7D&last=%7B%7BRecipient.LastName%7D%7D&email=%7B%7BRecipient.Email%7D%7D&phone=%7B%7BRecipient.Phone%7D%7D" value="Donate Here" />
         </form>
 
     </div>

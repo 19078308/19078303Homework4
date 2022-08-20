@@ -10,7 +10,7 @@ namespace _19078303Homework4.Models
        
         private bool _Status;
 
-        public Organisations(string fullname, int numbers, string date, double amount, bool status) : base(fullname, numbers, date, amount)
+        public Organisations(string fullname, string numbers, string date, double amount, bool status) : base(fullname, numbers, date, amount)
         {
             _Status = status;
         }
