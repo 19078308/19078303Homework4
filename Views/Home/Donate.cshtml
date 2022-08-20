@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Donate";
+}
+
+<div>
+    <h2>Enter your details before Donate</h2>
+    @{
+        if (IsPost)
+        {
+
+            var name1 = Request["name01"];
+            var number1 = Request["number01"];
+            var date1 = Request["date01"];
+            var amount1 = Request["amount01"];
+            var type1 = Request["type01"];
+            var status1 = Request["status01"];
+            var volunteer1 = Request["volunteer01"];
+
+            var tempdata = name1 + "," + number1 + "," + date1 + "," + amount1 + "," + type1 + "," + status1 + "," + volunteer1 + Environment.NewLine;
+
+            var datafile = Server.MapPath("~/App_Data/data.txt");
+            File.AppendAllText(datafile, tempdata);
+            @* result = "Thank you for your contributions. Your Information is saved and proctected."; *@
+        }
+    }
+    <div class="jumbotron">
+        <form id="form1" class="row" method="post">
+
+            <label for="Name">Name </label>
+            <br />
+            <input type="text" class="form-control" placeholder="Full Name" id="name1" name="name01" required>
+            <br />
+
+            <label for="number">Contact </label>
+            <br />
+            <input type="text" class="form-control" id="number1" name="number01" required>
+            <br />
+
+            <label for="date">Application Date </label>
+            <br />
+            <input type="date" class="form-control" id="date1" name="date01" required>
+            <br />
+
+            <label for="Money">Amount(R) </label>
+            <br>
+            <input type="number" class="form-control" id="amount1" name="amount01">
+            <br />
+            <br />
+
+            <label for="status">Active status </label>
+            <br>
+            <select class="form-control" id="status1" name="status01">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <br />
+
+            <label for="type">Type of Organisation </label>
+            <br>
+            <select class="form-control" id="type1" name="type01">
+                <option>NGO</option>
+                <option>Cormmercial Farmers</option>
+                <option>Traditional Authorities</option>
+                <option>Social Enterprise</option>
+                <option>Smallholder Farmers</option>
+                <option>Agri-Business</option>
+                <option>Financial Sector</option>
+                <option>Other</option>
+            </select>
+            <br />
+
+            <label for="volunteer">Volunteering </label>
+            <br>
+            <select class="form-control" id="volunteer1" name="volunteer01">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <br /><br />
+
+            <input class="btn btn-success btn-lg" type="submit" value="Submit">
+        </form><br /><br />
+        <form>
+            <input class="btn btn-primary" type="url" href="" value="Donate Here" />
+        </form>
+
+    </div>
+</div>
+<br />
+<hr />
+@*<div>
+    <h2>Individual Donations</h2>
+    <table class="table table-condensed table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Application Date</th>
+                <th>Donation Amount(R)</th>
+                <th>Volunteering</th>
+                <th>Description</th>
+                <th>Comment</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var donors in Model)
+            {
+                <tr>
+                    <th>@donors.FullName</th>
+                    <th>@donors.Numbers</th>
+                    <th>@donors.Date</th>
+                    <th>@donors.Amount</th>
+                    <th>@donors.Volunteer</th>
+                    <th>@donors.Decription()</th>
+                    <th>@donors.participation()</th>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>*@

@@ -1,0 +1,57 @@
+﻿
+@*<div>
+    <h2>Our members</h2>
+    <table class="table table-condensed table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Application Date</th>
+                <th>Donation Amount</th>
+                <th>Type of Member</th>
+                <th>Active Volunteer/Organisation</th>
+                <th>Description</th>
+                <th>Comment </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var members in Model)
+            {
+                <tr>
+                    <th>@members.FullName</th>
+                    <th>@members.Numbers</th>
+                    <th>@members.Date</th>
+                    <th>@members.Amount</th>
+                    <th>
+                        @if (members.GetType() == typeof(Individuals))
+                        {
+                            @:Volunteer
+                        }
+                        else
+                        {
+                            @:Organisation
+                        }
+                    </th>
+                    <th>
+                        @if (members.GetType() == typeof(Individuals))
+                        {
+                            Individuals persons = (Individuals)members;
+                            <span> @persons.Volunteer </span>
+                        }
+                        else
+                        {
+                            Organisations companies = (Organisations)members;
+                            <span> @companies.Status </span>
+                        }
+                    </th>
+                    <th>@members.Decription()</th>
+                    <th>@members.participation()</th>
+                </tr>
+
+            }
+        </tbody>
+
+    </table>
+</div> *@
+
