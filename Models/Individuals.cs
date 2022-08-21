@@ -24,7 +24,7 @@ namespace _19078303Homework4.Models
 
         public override string participation()
         {
-            return "Yes they participate in our programs";
+            return Volunteer? " Yes they participate in our programs " : "Not yet participating in any of our programs";
         }
     }
 }

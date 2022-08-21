@@ -3,12 +3,10 @@
 
 <div>
     <h2>Our members</h2>
-    <table class="table table-condensed table-bordered table-responsive">
+    <table class="table table-bordered table-condensed">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Application Date</th>
-                <th>Donation Amount</th>
                 <th>Type of Member</th>
                 <th>Active Volunteer/Organisation</th>
                 <th>Description</th>
@@ -21,8 +19,6 @@
             {
                 <tr>
                     <th>@members.FullName</th>
-                    <th>@members.Date</th>
-                    <th>@members.Amount</th>
                     <th>
                         @if (members.GetType() == typeof(Individuals))
                         {

@@ -24,12 +24,12 @@ namespace _19078303Homework4.Models
 
         public override string Decription()
         {
-            return Status ?  base.Decription() + "They are Active members who donate and support our Organisation " : " They are not one of our members" ;
+            return Status ?  base.Decription() + "They are Active members who donate and support our Organisation since " + Date : " They are not one of our members" ;
         }
 
         public override string participation()
         {
-            return "They are also our members";
+            return Status ? " They are devoted organisation to our course " : " This company is not involved ";
         }
     }
 }
